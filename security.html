@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Security — CryptoCarouge</title>
+  <meta name="description" content="How the CryptoCarouge public portfolio separates architecture from production secrets and uses automated safety checks.">
+  <meta property="og:title" content="Security — CryptoCarouge">
+  <meta property="og:description" content="Public architecture, private production, automated safety checks.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cryptocarouge.github.io/security.html">
+  <meta property="og:image" content="https://cryptocarouge.github.io/assets/social/home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07111d">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/"><span class="brand-mark">CC</span><span>CryptoCarouge</span></a>
+    <nav><a href="/#projects">Projects</a><a href="/about.html">About</a><a href="https://github.com/cryptocarouge">GitHub</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <a class="back-link" href="/">← Home</a>
+      <div class="project-kicker">PUBLIC SECURITY POSTURE</div>
+      <h1>Show the engineering.<br><span>Keep production private.</span></h1>
+      <p class="lead">The public portfolio is deliberately separated from production systems. Architecture and engineering decisions are public; secrets, personal data, live identifiers and sensitive implementation details are not.</p>
+    </section>
+
+    <section class="section project-layout">
+      <div class="project-main">
+        <div class="eyebrow">AUTOMATED GUARDRAILS</div>
+        <h2>Every public project gets checked twice.</h2>
+        <div class="checklist">
+          <div class="check"><i>01</i><div><b>GitHub Secret Scanning + Push Protection</b><br>Provider-recognized secrets are checked by GitHub before and after they reach the public repository.</div></div>
+          <div class="check"><i>02</i><div><b>Custom public-safety CI</b><br>A repository workflow scans public text files for key/token patterns, private webhook URLs, live Google document URLs, n8n credential objects, private infrastructure references, private personal references, email addresses and Swiss phone numbers.</div></div>
+          <div class="check"><i>03</i><div><b>No matched value is echoed into CI logs</b><br>If the custom scan fails, it reports only the file and match category so the safety mechanism does not create a second leak.</div></div>
+          <div class="check"><i>04</i><div><b>Production workflows stay private</b><br>Public repositories are documentation and architecture editions, not production exports.</div></div>
+        </div>
+
+        <div class="eyebrow" style="margin-top:64px">PUBLIC BOUNDARY</div>
+        <h2>What never belongs in the portfolio.</h2>
+        <div class="mini-grid">
+          <div class="mini-card"><h3>Secrets</h3><p>API keys, tokens, passwords, OAuth secrets, private keys and credential objects.</p></div>
+          <div class="mini-card"><h3>Identifiers</h3><p>Private chat IDs, live document IDs, internal webhook URLs and private infrastructure endpoints.</p></div>
+          <div class="mini-card"><h3>Personal data</h3><p>Client, resident, family or other non-public personal information.</p></div>
+          <div class="mini-card"><h3>Proprietary production logic</h3><p>Exact sensitive parameters, full production prompts, execution rules and live workflow exports.</p></div>
+        </div>
+
+        <div class="eyebrow" style="margin-top:64px">SITE PRIVACY</div>
+        <h2>No analytics. No tracking scripts.</h2>
+        <p class="lead">This portfolio is a static GitHub Pages site. It does not include analytics, advertising pixels or third-party tracking scripts.</p>
+      </div>
+
+      <aside class="project-side">
+        <div class="info-card"><div class="site-badge">PRIVACY FIRST</div><h3 style="margin-top:16px">Portfolio rule</h3><p>Public visibility is used to demonstrate engineering, not to make production reproducible.</p></div>
+        <div class="info-card"><h3>Repository policy</h3><p>Public project repositories explicitly state that no open-source license is granted unless the owner says otherwise.</p></div>
+        <div class="info-card"><h3>Current model</h3><p>Static public site + curated public repos + private production workflows.</p></div>
+      </aside>
+    </section>
+  </main>
+  <footer><span>CryptoCarouge</span><div><a href="/">Home</a><a href="/about.html">About</a><a href="https://github.com/cryptocarouge">GitHub</a></div></footer>
+</body>
+</html>
