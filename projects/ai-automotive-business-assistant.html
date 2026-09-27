@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Automotive Business Assistant — CryptoCarouge</title>
+  <meta name="description" content="A multimodal business assistant for document photos, structured extraction, customer workflows, PDF generation, data persistence and AI-assisted communication.">
+  <meta property="og:title" content="AI Automotive Business Assistant — CryptoCarouge">
+  <meta property="og:description" content="A multimodal business assistant for document photos, structured extraction, customer workflows, PDF generation, data persistence and AI-assisted communication.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cryptocarouge.github.io/projects/ai-automotive-business-assistant.html">
+  <meta property="og:image" content="https://cryptocarouge.github.io/assets/social/ai-automotive-business-assistant.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07111d">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/" aria-label="CryptoCarouge home"><span class="brand-mark">CC</span><span>CryptoCarouge</span></a>
+    <nav><a href="/#projects">Projects</a><a href="/about.html">About</a><a href="https://github.com/cryptocarouge">GitHub</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <a class="back-link" href="/#projects">← All projects</a>
+      <div class="project-kicker">MULTIMODAL · DOCUMENTS · BUSINESS OPERATIONS</div>
+      <h1>AI Automotive Business Assistant</h1>
+      <p class="lead">A multimodal business assistant for document photos, structured extraction, customer workflows, PDF generation, data persistence and AI-assisted communication.</p>
+      <div class="project-actions">
+        <a class="button primary" href="https://github.com/cryptocarouge/ai-automotive-business-assistant">View repository</a>
+        <a class="button secondary" href="https://github.com/cryptocarouge/ai-automotive-business-assistant/blob/main/docs/case-study.md">Read case study</a>
+      </div>
+      <div class="project-stats"><div class="stat"><strong>33</strong><span>nodes in audited private workflow</span></div><div class="stat"><strong>1</strong><span>webhook entry point</span></div><div class="stat"><strong>3</strong><span>core input routes: menu, text, photo</span></div></div>
+      <p class="note">Workflow scale reflects the audited private n8n snapshot used to prepare this public portfolio in September 2026. Production configuration remains private.</p>
+    </section>
+
+    <section class="section project-layout">
+      <div class="project-main">
+        <div class="eyebrow">THE PROBLEM</div>
+        <h2>Turn a conversational interface into a reliable operational tool.</h2>
+        <p class="lead">Small business automation often mixes customer lookup, document photos, PDFs, spreadsheets and communication. The system keeps those actions explicit instead of hiding business state changes inside a chatbot prompt.</p>
+
+        <div class="eyebrow" style="margin-top:64px">ARCHITECTURE</div>
+        <h2>A controlled pipeline.</h2>
+        <div class="flow"><div class="flow-row"><div class="flow-node">Telegram / webhook</div><div class="flow-arrow">→</div><div class="flow-node">Normalize input</div></div><div class="flow-row"><div class="flow-node">Menu / text / photo</div><div class="flow-arrow">→</div><div class="flow-node">Router</div></div><div class="flow-row"><div class="flow-node">Vision / document logic</div><div class="flow-arrow">→</div><div class="flow-node">Structured data</div></div><div class="flow-row"><div class="flow-node">Customer lookup</div><div class="flow-arrow">→</div><div class="flow-node">PDF / email / persistence</div></div><div class="flow-row"><div class="flow-node">Operational result</div><div class="flow-arrow">→</div><div class="flow-node">Telegram response</div></div></div>
+
+        <div class="eyebrow" style="margin-top:64px">ENGINEERING DECISIONS</div>
+        <h2>What matters under the hood.</h2>
+        <div class="checklist"><div class="check"><i>✓</i><div><b>Multimodal, but structured</b><br>Photo input enters a dedicated vision/document path before downstream operations.</div></div><div class="check"><i>✓</i><div><b>Conversation is not the workflow engine</b><br>Lookup, save, PDF generation and counters remain explicit operational stages.</div></div><div class="check"><i>✓</i><div><b>Persist structured state</b><br>Business data is stored independently of conversational output.</div></div><div class="check"><i>✓</i><div><b>Keep actions inspectable</b><br>Each operation has deterministic inputs and outputs, making failures easier to diagnose.</div></div></div>
+
+        <div class="eyebrow" style="margin-top:64px">PUBLIC / PRIVATE BOUNDARY</div>
+        <h2>Proof without secrets.</h2>
+        <div class="boundary">The public version excludes customer records, contact details, live Sheet identifiers, webhook endpoints, credentials and the production workflow JSON.</div>
+
+        <div class="eyebrow" style="margin-top:64px">TAKEAWAY</div>
+        <h2>AI can front an operation without owning the operation.</h2>
+        <p class="lead">The project shows how to combine a conversational surface with deterministic business actions so the LLM assists the workflow instead of becoming the workflow.</p>
+      </div>
+
+      <aside class="project-side">
+        <div class="info-card">
+          <div class="site-badge">BUSINESS AUTOMATION</div>
+          <h3 style="margin-top:16px">Stack</h3>
+          <div class="stack-list"><span>n8n</span><span>OpenAI</span><span>Telegram</span><span>Google Sheets</span><span>Gotenberg</span><span>Vision</span><span>JavaScript</span></div>
+        </div>
+        <div class="info-card">
+          <h3>Public scope</h3>
+          <p>Architecture, engineering rationale, technology choices and selected implementation concepts.</p>
+        </div>
+        <div class="info-card">
+          <h3>Private scope</h3>
+          <p>Production credentials, personal data, live identifiers, internal endpoints, proprietary rules and production workflow exports.</p>
+        </div>
+        <div class="info-card">
+          <h3>Security</h3>
+          <p>Repository protected by GitHub secret scanning, push protection and a custom public-safety CI scan.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <footer><span>CryptoCarouge</span><div><a href="/">Home</a><a href="https://github.com/cryptocarouge/ai-automotive-business-assistant">GitHub repo</a><a href="https://x.com/lancelotCarouge">X</a></div></footer>
+</body>
+</html>
