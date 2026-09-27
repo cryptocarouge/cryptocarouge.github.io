@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Football Matchday AI Agent — CryptoCarouge</title>
+  <meta name="description" content="An event-driven football intelligence and publishing system with persistent match state, multi-source validation, deduplication and controlled editorial reactions.">
+  <meta property="og:title" content="Football Matchday AI Agent — CryptoCarouge">
+  <meta property="og:description" content="An event-driven football intelligence and publishing system with persistent match state, multi-source validation, deduplication and controlled editorial reactions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cryptocarouge.github.io/projects/football-matchday-ai-agent.html">
+  <meta property="og:image" content="https://cryptocarouge.github.io/assets/social/football-matchday-ai-agent.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07111d">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/" aria-label="CryptoCarouge home"><span class="brand-mark">CC</span><span>CryptoCarouge</span></a>
+    <nav><a href="/#projects">Projects</a><a href="/about.html">About</a><a href="https://github.com/cryptocarouge">GitHub</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <a class="back-link" href="/#projects">← All projects</a>
+      <div class="project-kicker">LIVE STATE · MULTI-SOURCE · EVENT DRIVEN</div>
+      <h1>Football Matchday AI Agent</h1>
+      <p class="lead">An event-driven football intelligence and publishing system with persistent match state, multi-source validation, deduplication and controlled editorial reactions.</p>
+      <div class="project-actions">
+        <a class="button primary" href="https://github.com/cryptocarouge/football-matchday-ai-agent">View repository</a>
+        <a class="button secondary" href="https://github.com/cryptocarouge/football-matchday-ai-agent/blob/main/docs/case-study.md">Read case study</a>
+      </div>
+      <div class="project-stats"><div class="stat"><strong>93</strong><span>nodes in audited private workflow</span></div><div class="stat"><strong>5</strong><span>triggers in audited private workflow</span></div><div class="stat"><strong>2</strong><span>parallel information paths: news + live match</span></div></div>
+      <p class="note">Workflow scale reflects the audited private n8n snapshot used to prepare this public portfolio in September 2026. Production configuration remains private.</p>
+    </section>
+
+    <section class="section project-layout">
+      <div class="project-main">
+        <div class="eyebrow">THE PROBLEM</div>
+        <h2>A live match is state, not a stream of isolated API responses.</h2>
+        <p class="lead">Sports providers can disagree, events can arrive late or twice and an automated account must not repost the same goal. The workflow normalizes sources, tracks transitions and only generates a reaction when a meaningful new state is confirmed.</p>
+
+        <div class="eyebrow" style="margin-top:64px">ARCHITECTURE</div>
+        <h2>A controlled pipeline.</h2>
+        <div class="flow"><div class="flow-row"><div class="flow-node">Fixtures / schedules</div><div class="flow-arrow">→</div><div class="flow-node">Match detection</div></div><div class="flow-row"><div class="flow-node">News radar</div><div class="flow-arrow">→</div><div class="flow-node">Live match data</div></div><div class="flow-row"><div class="flow-node">Multi-source merge</div><div class="flow-arrow">→</div><div class="flow-node">Normalize / deduplicate</div></div><div class="flow-row"><div class="flow-node">Match state machine</div><div class="flow-arrow">→</div><div class="flow-node">Editorial / emotion layer</div></div><div class="flow-row"><div class="flow-node">Media validation</div><div class="flow-arrow">→</div><div class="flow-node">Publish / verify / persist</div></div></div>
+
+        <div class="eyebrow" style="margin-top:64px">ENGINEERING DECISIONS</div>
+        <h2>What matters under the hood.</h2>
+        <div class="checklist"><div class="check"><i>✓</i><div><b>Persistent match state</b><br>Score, phase and handled events influence what the system does next.</div></div><div class="check"><i>✓</i><div><b>Normalize before reacting</b><br>Provider responses are converted into a common representation before they affect state.</div></div><div class="check"><i>✓</i><div><b>Deduplicate events</b><br>Repeated polls and overlapping providers do not automatically produce repeated posts.</div></div><div class="check"><i>✓</i><div><b>Editorial comes after truth</b><br>The content layer runs only after a meaningful state transition is established.</div></div></div>
+
+        <div class="eyebrow" style="margin-top:64px">PUBLIC / PRIVATE BOUNDARY</div>
+        <h2>Proof without secrets.</h2>
+        <div class="boundary">The public version excludes provider credentials, OpenAI/X/Telegram secrets, private prompts, account-specific controls, internal state and the production workflow JSON.</div>
+
+        <div class="eyebrow" style="margin-top:64px">TAKEAWAY</div>
+        <h2>Detect the transition first. Generate the reaction second.</h2>
+        <p class="lead">The project demonstrates event-driven automation where noisy live sources are normalized into explicit state before any editorial AI is allowed to act.</p>
+      </div>
+
+      <aside class="project-side">
+        <div class="info-card">
+          <div class="site-badge">EVENT-DRIVEN SYSTEM</div>
+          <h3 style="margin-top:16px">Stack</h3>
+          <div class="stack-list"><span>n8n</span><span>OpenAI</span><span>X API</span><span>Telegram</span><span>FotMob</span><span>ESPN</span><span>TheSportsDB</span><span>RSS</span></div>
+        </div>
+        <div class="info-card">
+          <h3>Public scope</h3>
+          <p>Architecture, engineering rationale, technology choices and selected implementation concepts.</p>
+        </div>
+        <div class="info-card">
+          <h3>Private scope</h3>
+          <p>Production credentials, personal data, live identifiers, internal endpoints, proprietary rules and production workflow exports.</p>
+        </div>
+        <div class="info-card">
+          <h3>Security</h3>
+          <p>Repository protected by GitHub secret scanning, push protection and a custom public-safety CI scan.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <footer><span>CryptoCarouge</span><div><a href="/">Home</a><a href="https://github.com/cryptocarouge/football-matchday-ai-agent">GitHub repo</a><a href="https://x.com/lancelotCarouge">X</a></div></footer>
+</body>
+</html>
