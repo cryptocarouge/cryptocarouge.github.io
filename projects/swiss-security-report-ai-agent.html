@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Swiss Security Report AI Agent — CryptoCarouge</title>
+  <meta name="description" content="A privacy-first assistant that turns operational voice or text input into structured professional incident reports while keeping a strict factual boundary.">
+  <meta property="og:title" content="Swiss Security Report AI Agent — CryptoCarouge">
+  <meta property="og:description" content="A privacy-first assistant that turns operational voice or text input into structured professional incident reports while keeping a strict factual boundary.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cryptocarouge.github.io/projects/swiss-security-report-ai-agent.html">
+  <meta property="og:image" content="https://cryptocarouge.github.io/assets/social/swiss-security-report-ai-agent.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07111d">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/" aria-label="CryptoCarouge home"><span class="brand-mark">CC</span><span>CryptoCarouge</span></a>
+    <nav><a href="/#projects">Projects</a><a href="/about.html">About</a><a href="https://github.com/cryptocarouge">GitHub</a></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <a class="back-link" href="/#projects">← All projects</a>
+      <div class="project-kicker">VOICE · STRUCTURED REPORTING · PRIVACY</div>
+      <h1>Swiss Security Report AI Agent</h1>
+      <p class="lead">A privacy-first assistant that turns operational voice or text input into structured professional incident reports while keeping a strict factual boundary.</p>
+      <div class="project-actions">
+        <a class="button primary" href="https://github.com/cryptocarouge/swiss-security-report-ai-agent">View repository</a>
+        <a class="button secondary" href="https://github.com/cryptocarouge/swiss-security-report-ai-agent/blob/main/docs/case-study.md">Read case study</a>
+      </div>
+      <div class="project-stats"><div class="stat"><strong>23</strong><span>nodes in audited private workflow</span></div><div class="stat"><strong>1</strong><span>production trigger path</span></div><div class="stat"><strong>2</strong><span>input modes: voice + text</span></div></div>
+      <p class="note">Workflow scale reflects the audited private n8n snapshot used to prepare this public portfolio in September 2026. Production configuration remains private.</p>
+    </section>
+
+    <section class="section project-layout">
+      <div class="project-main">
+        <div class="eyebrow">THE PROBLEM</div>
+        <h2>Improve the writing without inventing the incident.</h2>
+        <p class="lead">Operational notes are often captured quickly, but the final report must remain factual. The model is used to structure and express supplied information, not to fill in missing names, times, actions or outcomes.</p>
+
+        <div class="eyebrow" style="margin-top:64px">ARCHITECTURE</div>
+        <h2>A controlled pipeline.</h2>
+        <div class="flow"><div class="flow-row"><div class="flow-node">Voice / text</div><div class="flow-arrow">→</div><div class="flow-node">Transcription if required</div></div><div class="flow-row"><div class="flow-node">Normalize input</div><div class="flow-arrow">→</div><div class="flow-node">Routing / session state</div></div><div class="flow-row"><div class="flow-node">AI report agent</div><div class="flow-arrow">→</div><div class="flow-node">Validation</div></div><div class="flow-row"><div class="flow-node">Telegram output</div><div class="flow-arrow">→</div><div class="flow-node">PDF generation</div></div></div>
+
+        <div class="eyebrow" style="margin-top:64px">ENGINEERING DECISIONS</div>
+        <h2>What matters under the hood.</h2>
+        <div class="checklist"><div class="check"><i>✓</i><div><b>Facts are the source of truth</b><br>Missing details remain missing rather than being inferred.</div></div><div class="check"><i>✓</i><div><b>Routing stays deterministic</b><br>Voice detection, callbacks, session restoration and output routing are normal workflow logic.</div></div><div class="check"><i>✓</i><div><b>AI has a narrow job</b><br>The model handles transcription, language interpretation and report drafting.</div></div><div class="check"><i>✓</i><div><b>Privacy boundary is explicit</b><br>The public project contains no resident/client data or employer-specific operating procedures.</div></div></div>
+
+        <div class="eyebrow" style="margin-top:64px">PUBLIC / PRIVATE BOUNDARY</div>
+        <h2>Proof without secrets.</h2>
+        <div class="boundary">The public version excludes personal/resident information, employer procedures, private webhook URLs, credentials, chat IDs, production prompts and the production workflow JSON.</div>
+
+        <div class="eyebrow" style="margin-top:64px">TAKEAWAY</div>
+        <h2>Use AI for language capability, not for factual invention.</h2>
+        <p class="lead">The core pattern is LLM-assisted professional writing under a strict operational boundary, with deterministic workflow logic controlling the process.</p>
+      </div>
+
+      <aside class="project-side">
+        <div class="info-card">
+          <div class="site-badge">OPERATIONAL AI</div>
+          <h3 style="margin-top:16px">Stack</h3>
+          <div class="stack-list"><span>n8n</span><span>OpenAI</span><span>Telegram</span><span>Gotenberg</span><span>JavaScript</span><span>PDF</span></div>
+        </div>
+        <div class="info-card">
+          <h3>Public scope</h3>
+          <p>Architecture, engineering rationale, technology choices and selected implementation concepts.</p>
+        </div>
+        <div class="info-card">
+          <h3>Private scope</h3>
+          <p>Production credentials, personal data, live identifiers, internal endpoints, proprietary rules and production workflow exports.</p>
+        </div>
+        <div class="info-card">
+          <h3>Security</h3>
+          <p>Repository protected by GitHub secret scanning, push protection and a custom public-safety CI scan.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <footer><span>CryptoCarouge</span><div><a href="/">Home</a><a href="https://github.com/cryptocarouge/swiss-security-report-ai-agent">GitHub repo</a><a href="https://x.com/lancelotCarouge">X</a></div></footer>
+</body>
+</html>
