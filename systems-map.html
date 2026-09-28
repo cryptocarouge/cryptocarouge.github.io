@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Systems Map — CryptoCarouge</title>
+  <meta name="description" content="A map of the public CryptoCarouge systems and the reusable engineering pattern shared across market automation, AI publishing, reporting, business operations and live sports intelligence.">
+  <meta property="og:title" content="CryptoCarouge Systems Map">
+  <meta property="og:description" content="Five different systems. One reusable engineering discipline.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cryptocarouge.github.io/systems-map.html">
+  <meta property="og:image" content="https://cryptocarouge.github.io/assets/social/home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#07111d">
+  <link rel="canonical" href="https://cryptocarouge.github.io/systems-map.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/"><span class="brand-mark">CC</span><span>CryptoCarouge</span></a>
+  <nav><a href="/#projects">Projects</a><a href="/systems-map.html">Systems Map</a><a href="/about.html">About</a><a href="/security.html">Security</a><a href="https://github.com/cryptocarouge">GitHub</a></nav>
+</header>
+
+<main class="page-shell">
+  <section class="page-hero">
+    <a class="back-link" href="/">← Home</a>
+    <div class="project-kicker">CRYPTOCAROUGE SYSTEMS MAP</div>
+    <h1>Five systems.<br><span>One engineering discipline.</span></h1>
+    <p class="lead">The domains are different — markets, publishing, operational reporting, business documents and live football — but the systems share the same core control pattern.</p>
+    <div class="project-actions">
+      <a class="button primary" href="#map">Open systems map</a>
+      <a class="button secondary" href="/security.html">Security model</a>
+    </div>
+  </section>
+
+  <section id="map" class="section">
+    <div class="section-heading">
+      <div class="eyebrow">REUSABLE CONTROL PATTERN</div>
+      <h2>Normalize → State → AI → Validate → Act → Verify.</h2>
+      <p>AI is one component inside a controlled system, not the system itself.</p>
+    </div>
+
+    <div class="flow systems-flow">
+      <div class="flow-row"><div class="flow-node">Sources / Inputs</div><div class="flow-arrow">→</div><div class="flow-node">Normalize</div></div>
+      <div class="flow-row"><div class="flow-node">Explicit State</div><div class="flow-arrow">→</div><div class="flow-node">AI where useful</div></div>
+      <div class="flow-row"><div class="flow-node">Validation</div><div class="flow-arrow">→</div><div class="flow-node">Action</div></div>
+      <div class="flow-row"><div class="flow-node">Verify</div><div class="flow-arrow">→</div><div class="flow-node">Persist / Monitor</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div class="eyebrow">THE SYSTEMS</div>
+      <h2>Same principles, different problems.</h2>
+    </div>
+
+    <div class="systems-map-grid">
+      <a class="system-card" href="/projects/lancelot-trading-machine.html">
+        <div class="system-icon">LT</div>
+        <div><span class="tag">Market systems</span><h3>Lancelot Trading Machine</h3><p>Market workers, discovery, qualification, explicit execution state and reconciliation.</p><small>254 nodes · 14 triggers</small></div>
+      </a>
+
+      <a class="system-card" href="/projects/lancelot-x-ai-publishing.html">
+        <div class="system-icon">LX</div>
+        <div><span class="tag">Autonomous publishing</span><h3>Lancelot X</h3><p>Facts first, editorial AI second, publication verification before memory mutation.</p><small>56 nodes · 5 triggers</small></div>
+      </a>
+
+      <a class="system-card" href="/projects/swiss-security-report-ai-agent.html">
+        <div class="system-icon">SR</div>
+        <div><span class="tag">Operational AI</span><h3>Swiss Security Report AI</h3><p>Voice/text intake, strict factual boundary, structured reporting and PDF output.</p><small>23 nodes · voice + text</small></div>
+      </a>
+
+      <a class="system-card" href="/projects/ai-automotive-business-assistant.html">
+        <div class="system-icon">AA</div>
+        <div><span class="tag">Business automation</span><h3>AI Automotive Assistant</h3><p>Vision, structured documents, customer operations, PDFs and persistent business state.</p><small>33 nodes · 3 input routes</small></div>
+      </a>
+
+      <a class="system-card" href="/projects/football-matchday-ai-agent.html">
+        <div class="system-icon">FM</div>
+        <div><span class="tag">Event driven</span><h3>Football Matchday AI</h3><p>Multi-source live events, state machine, deduplication and controlled publishing.</p><small>93 nodes · 5 triggers</small></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section split">
+    <div>
+      <div class="eyebrow">SHARED PRINCIPLES</div>
+      <h2>What stays constant.</h2>
+    </div>
+    <div class="principles">
+      <div><span>01</span><p><strong>Deterministic before generative.</strong> Normal workflow logic owns routing, state and validation whenever possible.</p></div>
+      <div><span>02</span><p><strong>Explicit state.</strong> The system tracks what happened, what is pending and what has already been processed.</p></div>
+      <div><span>03</span><p><strong>Verification before action.</strong> Noisy external data is normalized before it can influence downstream behaviour.</p></div>
+      <div><span>04</span><p><strong>Operational resilience.</strong> Retries, fallbacks, health checks, reconciliation and monitoring are designed in.</p></div>
+      <div><span>05</span><p><strong>Privacy by design.</strong> Public architecture is separated from production secrets and personal data.</p></div>
+    </div>
+  </section>
+
+  <section class="section policy">
+    <div><div class="eyebrow">PORTFOLIO RULE</div><h2>Proof without secrets.</h2></div>
+    <p>The public work demonstrates architecture and engineering decisions. Production credentials, live identifiers, personal data, proprietary rules and production workflow exports stay private.</p>
+  </section>
+</main>
+
+<footer><span>CryptoCarouge</span><div><a href="/">Home</a><a href="/security.html">Security</a><a href="https://github.com/cryptocarouge">GitHub</a><a href="https://x.com/lancelotCarouge">X</a></div></footer>
+</body>
+</html>
