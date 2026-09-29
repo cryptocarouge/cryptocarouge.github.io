@@ -104,3 +104,36 @@ footer{max-width:var(--max);margin:auto;padding:34px 26px 54px;border-top:1px so
   .film-meta{align-items:flex-start;flex-direction:column;padding:18px}
   .film-meta .button{width:100%;text-align:center}
 }
+
+
+/* Mobile/layout hardening */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.nav,main,footer,.hero,.section,.section-heading,.film-shell{min-width:0;max-width:100%}
+main,.nav,footer{width:100%}
+h1,h2,.lead,.section-heading p,.policy p,.card p{overflow-wrap:anywhere}
+.signal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;width:100%;max-width:760px}
+.signal div{min-width:0}
+.portfolio-film{width:100%;max-width:100%;min-width:0;height:auto;aspect-ratio:16/9;object-fit:cover}
+
+@media(max-width:760px){
+  main{padding:0 20px}
+  .nav{padding:0 20px}
+  .hero{min-height:auto;padding:86px 0 72px;width:100%}
+  h1{font-size:clamp(44px,13vw,58px);line-height:.98;max-width:100%}
+  .lead{font-size:18px;max-width:100%}
+  .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%}
+  .button{text-align:center;min-width:0}
+  .signal{grid-template-columns:1fr;gap:14px;margin-top:44px}
+  .signal div{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+  .signal div:last-child{border-bottom:0}
+  .film-heading{max-width:100%}
+  .portfolio-film{border-radius:0}
+  .film-meta strong,.film-meta span{overflow-wrap:anywhere}
+  footer{padding-left:20px;padding-right:20px}
+}
+
+@media (hover:none) and (pointer:coarse) and (max-width:1200px){
+  body{overflow-x:hidden}
+  main,.nav,footer{max-width:100%;width:100%}
+  .hero,.section,.film-shell,.portfolio-film{max-width:100%;min-width:0}
+}
